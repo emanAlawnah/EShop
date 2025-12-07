@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36603.0 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.PL", "EShop.PL\EShop.PL.csproj", "{3EB2BD25-DEF6-4391-AB90-10EEEA8143B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.BLL", "EShop.BLL\EShop.BLL.csproj", "{D0E2FD27-FBF6-4E4A-8199-552737D71A92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.DAL", "EShop.DAL\EShop.DAL.csproj", "{91C46549-161E-4276-B5FF-34ED176057EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EB2BD25-DEF6-4391-AB90-10EEEA8143B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EB2BD25-DEF6-4391-AB90-10EEEA8143B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EB2BD25-DEF6-4391-AB90-10EEEA8143B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EB2BD25-DEF6-4391-AB90-10EEEA8143B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0E2FD27-FBF6-4E4A-8199-552737D71A92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0E2FD27-FBF6-4E4A-8199-552737D71A92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0E2FD27-FBF6-4E4A-8199-552737D71A92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0E2FD27-FBF6-4E4A-8199-552737D71A92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91C46549-161E-4276-B5FF-34ED176057EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91C46549-161E-4276-B5FF-34ED176057EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91C46549-161E-4276-B5FF-34ED176057EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91C46549-161E-4276-B5FF-34ED176057EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED554FED-2A34-48A2-A30F-9775DD042271}
+	EndGlobalSection
+EndGlobal

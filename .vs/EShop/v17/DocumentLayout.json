@@ -1,0 +1,270 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{91C46549-161E-4276-B5FF-34ED176057EA}|EShop.DAL\\EShop.DAL.csproj|c:\\users\\hp\\documents\\asp.net12\\asp12\\api\\eshop\\eshop.dal\\dto\\request\\categoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91C46549-161E-4276-B5FF-34ED176057EA}|EShop.DAL\\EShop.DAL.csproj|solutionrelative:eshop.dal\\dto\\request\\categoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91C46549-161E-4276-B5FF-34ED176057EA}|EShop.DAL\\EShop.DAL.csproj|c:\\users\\hp\\documents\\asp.net12\\asp12\\api\\eshop\\eshop.dal\\dto\\response\\categoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91C46549-161E-4276-B5FF-34ED176057EA}|EShop.DAL\\EShop.DAL.csproj|solutionrelative:eshop.dal\\dto\\response\\categoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91C46549-161E-4276-B5FF-34ED176057EA}|EShop.DAL\\EShop.DAL.csproj|c:\\users\\hp\\documents\\asp.net12\\asp12\\api\\eshop\\eshop.dal\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91C46549-161E-4276-B5FF-34ED176057EA}|EShop.DAL\\EShop.DAL.csproj|solutionrelative:eshop.dal\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/./eShop/True/SqlTable/dbo.CategoryTranslations.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EB2BD25-DEF6-4391-AB90-10EEEA8143B3}|EShop.PL\\EShop.PL.csproj|c:\\users\\hp\\documents\\asp.net12\\asp12\\api\\eshop\\eshop.pl\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EB2BD25-DEF6-4391-AB90-10EEEA8143B3}|EShop.PL\\EShop.PL.csproj|solutionrelative:eshop.pl\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EB2BD25-DEF6-4391-AB90-10EEEA8143B3}|EShop.PL\\EShop.PL.csproj|c:\\users\\hp\\documents\\asp.net12\\asp12\\api\\eshop\\eshop.pl\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3EB2BD25-DEF6-4391-AB90-10EEEA8143B3}|EShop.PL\\EShop.PL.csproj|solutionrelative:eshop.pl\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91C46549-161E-4276-B5FF-34ED176057EA}|EShop.DAL\\EShop.DAL.csproj|c:\\users\\hp\\documents\\asp.net12\\asp12\\api\\eshop\\eshop.dal\\models\\categorytranslation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91C46549-161E-4276-B5FF-34ED176057EA}|EShop.DAL\\EShop.DAL.csproj|solutionrelative:eshop.dal\\models\\categorytranslation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91C46549-161E-4276-B5FF-34ED176057EA}|EShop.DAL\\EShop.DAL.csproj|c:\\users\\hp\\documents\\asp.net12\\asp12\\api\\eshop\\eshop.dal\\models\\basemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91C46549-161E-4276-B5FF-34ED176057EA}|EShop.DAL\\EShop.DAL.csproj|solutionrelative:eshop.dal\\models\\basemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EB2BD25-DEF6-4391-AB90-10EEEA8143B3}|EShop.PL\\EShop.PL.csproj|c:\\users\\hp\\documents\\asp.net12\\asp12\\api\\eshop\\eshop.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EB2BD25-DEF6-4391-AB90-10EEEA8143B3}|EShop.PL\\EShop.PL.csproj|solutionrelative:eshop.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.DAL\\Migrations\\20251205225450_int.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EShop.DAL\\Migrations\\20251205225450_int.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91C46549-161E-4276-B5FF-34ED176057EA}|EShop.DAL\\EShop.DAL.csproj|c:\\users\\hp\\documents\\asp.net12\\asp12\\api\\eshop\\eshop.dal\\data\\aplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91C46549-161E-4276-B5FF-34ED176057EA}|EShop.DAL\\EShop.DAL.csproj|solutionrelative:eshop.dal\\data\\aplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EB2BD25-DEF6-4391-AB90-10EEEA8143B3}|EShop.PL\\EShop.PL.csproj|c:\\users\\hp\\documents\\asp.net12\\asp12\\api\\eshop\\eshop.pl\\resources\\sharedresource.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{3EB2BD25-DEF6-4391-AB90-10EEEA8143B3}|EShop.PL\\EShop.PL.csproj|solutionrelative:eshop.pl\\resources\\sharedresource.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EB2BD25-DEF6-4391-AB90-10EEEA8143B3}|EShop.PL\\EShop.PL.csproj|c:\\users\\hp\\documents\\asp.net12\\asp12\\api\\eshop\\eshop.pl\\resources\\sharedresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EB2BD25-DEF6-4391-AB90-10EEEA8143B3}|EShop.PL\\EShop.PL.csproj|solutionrelative:eshop.pl\\resources\\sharedresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0E2FD27-FBF6-4E4A-8199-552737D71A92}|EShop.BLL\\EShop.BLL.csproj|c:\\users\\hp\\documents\\asp.net12\\asp12\\api\\eshop\\eshop.bll\\eshop.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D0E2FD27-FBF6-4E4A-8199-552737D71A92}|EShop.BLL\\EShop.BLL.csproj|solutionrelative:eshop.bll\\eshop.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0E2FD27-FBF6-4E4A-8199-552737D71A92}|EShop.BLL\\EShop.BLL.csproj|c:\\users\\hp\\documents\\asp.net12\\asp12\\api\\eshop\\eshop.bll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0E2FD27-FBF6-4E4A-8199-552737D71A92}|EShop.BLL\\EShop.BLL.csproj|solutionrelative:eshop.bll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "dbo.CategoryTranslations [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/./eShop/True/SqlTable/dbo.CategoryTranslations.sql",
+              "ToolTip": "dbo.CategoryTranslations [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-12-07T15:50:14.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CategoryResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.DAL\\DTO\\Response\\CategoryResponse.cs",
+              "RelativeDocumentMoniker": "EShop.DAL\\DTO\\Response\\CategoryResponse.cs",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.DAL\\DTO\\Response\\CategoryResponse.cs",
+              "RelativeToolTip": "EShop.DAL\\DTO\\Response\\CategoryResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T23:12:52.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CategoryRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.DAL\\DTO\\Request\\CategoryRequest.cs",
+              "RelativeDocumentMoniker": "EShop.DAL\\DTO\\Request\\CategoryRequest.cs",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.DAL\\DTO\\Request\\CategoryRequest.cs",
+              "RelativeToolTip": "EShop.DAL\\DTO\\Request\\CategoryRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T23:06:28.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20251205225450_int.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.DAL\\Migrations\\20251205225450_int.cs",
+              "RelativeDocumentMoniker": "EShop.DAL\\Migrations\\20251205225450_int.cs",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.DAL\\Migrations\\20251205225450_int.cs",
+              "RelativeToolTip": "EShop.DAL\\Migrations\\20251205225450_int.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T22:54:50.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BaseModel.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.DAL\\Models\\BaseModel.cs",
+              "RelativeDocumentMoniker": "EShop.DAL\\Models\\BaseModel.cs",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.DAL\\Models\\BaseModel.cs",
+              "RelativeToolTip": "EShop.DAL\\Models\\BaseModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T22:46:11.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CategoryTranslation.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.DAL\\Models\\CategoryTranslation.cs",
+              "RelativeDocumentMoniker": "EShop.DAL\\Models\\CategoryTranslation.cs",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.DAL\\Models\\CategoryTranslation.cs",
+              "RelativeToolTip": "EShop.DAL\\Models\\CategoryTranslation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T21:38:02.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.PL\\appsettings.json",
+              "RelativeDocumentMoniker": "EShop.PL\\appsettings.json",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.PL\\appsettings.json",
+              "RelativeToolTip": "EShop.PL\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-04T22:11:02.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.PL\\Program.cs",
+              "RelativeDocumentMoniker": "EShop.PL\\Program.cs",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.PL\\Program.cs",
+              "RelativeToolTip": "EShop.PL\\Program.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCcAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T21:21:40.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SharedResource.resx",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.PL\\Resources\\SharedResource.resx",
+              "RelativeDocumentMoniker": "EShop.PL\\Resources\\SharedResource.resx",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.PL\\Resources\\SharedResource.resx",
+              "RelativeToolTip": "EShop.PL\\Resources\\SharedResource.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-12-04T21:13:07.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SharedResource.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.PL\\Resources\\SharedResource.cs",
+              "RelativeDocumentMoniker": "EShop.PL\\Resources\\SharedResource.cs",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.PL\\Resources\\SharedResource.cs",
+              "RelativeToolTip": "EShop.PL\\Resources\\SharedResource.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T21:11:01.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.DAL\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "EShop.DAL\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.DAL\\Models\\Category.cs",
+              "RelativeToolTip": "EShop.DAL\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T22:43:51.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.PL\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "EShop.PL\\Controllers\\CategoriesController.cs",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.PL\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "EShop.PL\\Controllers\\CategoriesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T23:41:30.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.DAL\\Data\\AplicationDbContext.cs",
+              "RelativeDocumentMoniker": "EShop.DAL\\Data\\AplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.DAL\\Data\\AplicationDbContext.cs",
+              "RelativeToolTip": "EShop.DAL\\Data\\AplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T23:36:34.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EShop.BLL.csproj",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.BLL\\EShop.BLL.csproj",
+              "RelativeDocumentMoniker": "EShop.BLL\\EShop.BLL.csproj",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.BLL\\EShop.BLL.csproj",
+              "RelativeToolTip": "EShop.BLL\\EShop.BLL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-28T23:22:50.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.BLL\\Class1.cs",
+              "RelativeDocumentMoniker": "EShop.BLL\\Class1.cs",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\asp.net12\\asp12\\api\\EShop\\EShop.BLL\\Class1.cs",
+              "RelativeToolTip": "EShop.BLL\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T23:20:53.7Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
