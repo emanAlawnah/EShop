@@ -1,0 +1,14 @@
+C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.DAL\bin\Debug\net9.0\EShop.DAL.deps.json
+C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.DAL\bin\Debug\net9.0\EShop.DAL.runtimeconfig.json
+C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.DAL\bin\Debug\net9.0\EShop.DAL.dll
+C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.DAL\bin\Debug\net9.0\EShop.DAL.pdb
+C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.DAL\obj\Debug\net9.0\EShop.DAL.csproj.AssemblyReference.cache
+C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.DAL\obj\Debug\net9.0\EShop.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.DAL\obj\Debug\net9.0\EShop.DAL.AssemblyInfoInputs.cache
+C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.DAL\obj\Debug\net9.0\EShop.DAL.AssemblyInfo.cs
+C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.DAL\obj\Debug\net9.0\EShop.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.DAL\obj\Debug\net9.0\EShop.DAL.dll
+C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.DAL\obj\Debug\net9.0\refint\EShop.DAL.dll
+C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.DAL\obj\Debug\net9.0\EShop.DAL.pdb
+C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.DAL\obj\Debug\net9.0\EShop.DAL.genruntimeconfig.cache
+C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.DAL\obj\Debug\net9.0\ref\EShop.DAL.dll
