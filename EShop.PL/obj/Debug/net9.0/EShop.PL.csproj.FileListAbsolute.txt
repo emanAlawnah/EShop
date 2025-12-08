@@ -175,3 +175,4 @@ C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.PL\bin\Debug\net9.0\Mapste
 C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.PL\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.PL\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.PL\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.PL\obj\Debug\net9.0\EShop.PL.sourcelink.json
