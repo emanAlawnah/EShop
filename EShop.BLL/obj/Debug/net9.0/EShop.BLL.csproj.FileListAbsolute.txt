@@ -13,3 +13,4 @@ C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.BLL\obj\Debug\net9.0\EShop
 C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.BLL\obj\Debug\net9.0\refint\EShop.BLL.dll
 C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.BLL\obj\Debug\net9.0\EShop.BLL.pdb
 C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.BLL\obj\Debug\net9.0\ref\EShop.BLL.dll
+C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.BLL\obj\Debug\net9.0\EShop.BLL.sourcelink.json

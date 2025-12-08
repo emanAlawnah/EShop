@@ -1,7 +1,9 @@
-﻿using EShop.DAL.Data;
+﻿using EShop.BLL.Service;
+using EShop.DAL.Data;
 using EShop.DAL.DTO.Request;
 using EShop.DAL.DTO.Response;
 using EShop.DAL.Models;
+using EShop.DAL.Repository;
 using EShop.PL.Resourses;
 using Mapster;
 using Microsoft.AspNetCore.Http;
@@ -15,30 +17,26 @@ namespace EShop.PL.Controllers
     [ApiController]
     public class CategoriesController : ControllerBase
     {
-        private readonly AplicationDbContext _context;
         private readonly IStringLocalizer<SharedResource> _Localizer;
+        private readonly ICategorySerivce _CategorySerivce;
 
-        public CategoriesController(AplicationDbContext Context,IStringLocalizer<SharedResource> localizer) {
-            _context = Context;
+        public CategoriesController(IStringLocalizer<SharedResource> localizer, ICategorySerivce categorySerivce) {
             _Localizer = localizer;
+            _CategorySerivce = categorySerivce;
         }
 
         [HttpGet("")]
         public IActionResult index() {
-            var Categories = _context.Categories.Include(c=>c.Translations).ToList();
-            var Response = Categories.Adapt<List<CategoryResponse>>();
+            var response= _CategorySerivce.GetAllCategories();
 
-            
-            return Ok(new {massage=_Localizer["Success"].Value, Response });   
+
+            return Ok(new {massage=_Localizer["Success"].Value, response });   
         }
 
         [HttpPost("")]
         public IActionResult Create(CategoryRequest request)
         {
-            var cat = request.Adapt<Category>();
-            _context.Categories.Add(cat);
-            _context.SaveChanges();
-
+            var response=_CategorySerivce.CreateCategory(request);
             return Ok(new { massage = _Localizer["Success"].Value });
         }
 

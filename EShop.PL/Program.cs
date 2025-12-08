@@ -1,6 +1,8 @@
 
 
+using EShop.BLL.Service;
 using EShop.DAL.Data;
+using EShop.DAL.Repository;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -45,6 +47,8 @@ namespace EShop.PL
             options.UseSqlServer(builder.Configuration.GetSection("ConnectionStrings")["DefultConection"]));
 
             builder.Services.AddSwaggerGen();
+            builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+            builder.Services.AddScoped<ICategorySerivce, CategoryService>();
             var app = builder.Build();
             app.UseRequestLocalization(app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
 

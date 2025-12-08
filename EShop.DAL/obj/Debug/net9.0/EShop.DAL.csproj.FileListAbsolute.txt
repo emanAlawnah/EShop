@@ -12,3 +12,4 @@ C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.DAL\obj\Debug\net9.0\refin
 C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.DAL\obj\Debug\net9.0\EShop.DAL.pdb
 C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.DAL\obj\Debug\net9.0\EShop.DAL.genruntimeconfig.cache
 C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.DAL\obj\Debug\net9.0\ref\EShop.DAL.dll
+C:\Users\Hp\Documents\asp.net12\asp12\api\EShop\EShop.DAL\obj\Debug\net9.0\EShop.DAL.sourcelink.json
