@@ -1,5 +1,37 @@
 [
   {
+    "ContainingType": "EShop.PL.Areas.Identity.AcountController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/Acount/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Request",
+        "Type": "EShop.DAL.DTO.Request.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EShop.PL.Areas.Identity.AcountController",
+    "Method": "Register",
+    "RelativePath": "api/Auth/Acount/Regiser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Request",
+        "Type": "EShop.DAL.DTO.Request.RegisterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EShop.PL.Controllers.CategoriesController",
     "Method": "index",
     "RelativePath": "api/Categories",
