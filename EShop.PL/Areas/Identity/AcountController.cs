@@ -39,5 +39,12 @@ namespace EShop.PL.Areas.Identity
             return Ok(result);
         }
 
+        [HttpGet("confairmemail")]
+        public async Task<IActionResult> ConfairmEmail (string token, string userId)
+        {
+            var result = await _AuthenticationService.confairmEmailAsync(token, userId);
+       
+            return Ok(result);
+        }
     }
 }

@@ -1,6 +1,27 @@
 [
   {
     "ContainingType": "EShop.PL.Areas.Identity.AcountController",
+    "Method": "ConfairmEmail",
+    "RelativePath": "api/Auth/Acount/confairmemail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "token",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EShop.PL.Areas.Identity.AcountController",
     "Method": "Login",
     "RelativePath": "api/Auth/Acount/Login",
     "HttpMethod": "POST",
@@ -32,8 +53,8 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "EShop.PL.Controllers.CategoriesController",
-    "Method": "index",
+    "ContainingType": "EShop.PL.Areas.User.CategoriesController",
+    "Method": "Index",
     "RelativePath": "api/Categories",
     "HttpMethod": "GET",
     "IsController": true,
@@ -42,7 +63,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "EShop.PL.Controllers.CategoriesController",
+    "ContainingType": "EShop.PL.Areas.Admin.CategoriesController",
     "Method": "Create",
     "RelativePath": "api/Categories",
     "HttpMethod": "POST",

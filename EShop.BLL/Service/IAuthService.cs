@@ -13,6 +13,8 @@ namespace EShop.BLL.Service
         Task<RegisterResponse> RegisterAsync(RegisterRequest registerRequest);
         Task<LoginResponse> LoginAsync(LoginRequest loginRequest);
 
+        Task<bool> confairmEmailAsync(string token, string userId);
+
     }
 
 }

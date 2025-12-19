@@ -7,6 +7,7 @@ using EShop.DAL.Repository;
 using EShop.DAL.utils;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -53,7 +54,24 @@ namespace EShop.PL
             builder.Services.AddDbContext<AplicationDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetSection("ConnectionStrings")["DefultConection"]));
 
-            builder.Services.AddIdentity<AplecationUser, IdentityRole>().AddEntityFrameworkStores<AplicationDbContext>().AddDefaultTokenProviders();
+            builder.Services.AddIdentity<AplecationUser, IdentityRole>(Options =>
+            {
+                Options.Password.RequireDigit = true;
+                Options.Password.RequireLowercase = true;
+                Options.Password.RequireUppercase = true;
+                Options.Password.RequireNonAlphanumeric = true;
+                Options.Password.RequiredLength = 8;
+
+
+                Options.User.RequireUniqueEmail = true;
+
+                Options.Lockout.MaxFailedAccessAttempts = 10;
+                Options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10);
+
+
+                Options.SignIn.RequireConfirmedEmail = true;
+          
+            }).AddEntityFrameworkStores<AplicationDbContext>().AddDefaultTokenProviders();
             builder.Services.AddSwaggerGen();
             builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
             builder.Services.AddScoped<ICategorySerivce, CategoryService>();
@@ -79,6 +97,7 @@ namespace EShop.PL
         };
     });
 
+            builder.Services.AddTransient<IEmailSender, EmailSender>();
 
             var app = builder.Build();
             app.UseRequestLocalization(app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
