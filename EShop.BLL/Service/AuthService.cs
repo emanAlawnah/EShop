@@ -3,6 +3,7 @@ using EShop.DAL.DTO.Response;
 using EShop.DAL.Models;
 using Mapster;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -20,11 +21,15 @@ namespace EShop.BLL.Service
     {
         private readonly UserManager<AplecationUser> _UserManager;
         private readonly IConfiguration _Configuration;
+        private readonly IEmailSender _EmailSender;
+        private readonly SignInManager<AplecationUser> _Signinmaneger;
 
-        public AuthService(UserManager<AplecationUser> userManager,IConfiguration configuration)
+        public AuthService(UserManager<AplecationUser> userManager,IConfiguration configuration,IEmailSender emailSender, SignInManager<AplecationUser> signinmaneger)
         {
             _UserManager = userManager;
             _Configuration = configuration;
+            _EmailSender = emailSender;
+            _Signinmaneger = signinmaneger;
         }
         public async Task<LoginResponse> LoginAsync(LoginRequest loginRequest)
         {
@@ -33,7 +38,7 @@ namespace EShop.BLL.Service
                 var user = await _UserManager.FindByEmailAsync(loginRequest.Email);
                 if (user is null)
                 {
-                    return new LoginResponse
+                    return new LoginResponse()
                     {
                         Success = false,
                         Message = "invalid email"
@@ -41,15 +46,43 @@ namespace EShop.BLL.Service
 
                 }
 
-                var result = await _UserManager.CheckPasswordAsync(user, loginRequest.Password);
-                if (!result)
-                {
-                    return new LoginResponse
+                if (await _UserManager.IsLockedOutAsync(user)) {
+                    return new LoginResponse()
                     {
-                        Success = false,
-                        Message = "invalid pasword"
+                        Success = true,
+                        Message = "acount is locked, try agane later"
                     };
                 }
+                var result = await _Signinmaneger.CheckPasswordSignInAsync(user, loginRequest.Password, true);
+                if (result.IsLockedOut)
+                {
+                    return new LoginResponse()
+                    {
+                        Success = true,
+                        Message = "acount locked due to multiple atempts"
+                    };
+                }
+               else if (result.IsNotAllowed)
+                {
+                    return new LoginResponse()
+                    {
+                        Success = false,
+                        Message = "plz confairm your email"
+                    };
+                }
+
+                else if (!result.Succeeded)
+                {
+                    return new LoginResponse()
+                    {
+                        Success = false,
+                        Message = "none valied password"
+                    };
+
+                }
+             
+
+
 
                 return new LoginResponse()
                 {
@@ -89,7 +122,18 @@ namespace EShop.BLL.Service
 
                 }
                 await _UserManager.AddToRoleAsync(user, "User");
+                var token =  await _UserManager.GenerateEmailConfirmationTokenAsync(user);
+                token = Uri.EscapeDataString(token);
+                var emailUrl = $"https://localhost:7170/api/Auth/Acount/confairmemail?token={token}&userId={user.Id}";
+                await _EmailSender.SendEmailAsync(user.Email,"confairm email", $@"
+    <h2>Welcome {user.UserName}</h2>
+    <p>Please confirm your email by clicking the link below:</p>
+    <a href='{emailUrl}'>Confirm Email</a>
+"
+
+                    );
                 return new RegisterResponse()
+                 
                 {
                     Success = true,
                     Message = "success"
@@ -110,6 +154,15 @@ namespace EShop.BLL.Service
        
         }
 
+        public async Task<bool> confairmEmailAsync(string token, string userId)
+        {
+            var user = await _UserManager.FindByIdAsync(userId);
+            if (user is null) return false;
+
+            var result = await _UserManager.ConfirmEmailAsync(user, token);
+            if(!result.Succeeded) { return false; }
+            return true;
+        }
         public async Task<string> GenerateAcsessToken(AplecationUser user) {
             var userClaims = new List<Claim>()
         {
