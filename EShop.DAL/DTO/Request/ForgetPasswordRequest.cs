@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EShop.DAL.DTO.Response
+namespace EShop.DAL.DTO.Request
 {
-    public class LoginResponse : BaseResponse
+    public class ForgetPasswordRequest
     {
-       
-        public string? AccessToken { get; set; }
+        public string Email { get; set; }
     }
 }

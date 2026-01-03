@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EShop.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5db22df6f500895dbeca5b816a32f300197953fb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ad0a2bc75051f22facc4bea4377a4ce3e9bdd49")]
 [assembly: System.Reflection.AssemblyProductAttribute("EShop.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EShop.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

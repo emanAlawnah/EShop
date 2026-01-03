@@ -39,7 +39,7 @@
   {
     "ContainingType": "EShop.PL.Areas.Identity.AcountController",
     "Method": "Register",
-    "RelativePath": "api/Auth/Acount/Regiser",
+    "RelativePath": "api/Auth/Acount/Register",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -47,6 +47,38 @@
       {
         "Name": "Request",
         "Type": "EShop.DAL.DTO.Request.RegisterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EShop.PL.Areas.Identity.AcountController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/Auth/Acount/resetPassword",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "EShop.DAL.DTO.Request.ResetPasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EShop.PL.Areas.Identity.AcountController",
+    "Method": "RequestPasswordReset",
+    "RelativePath": "api/Auth/Acount/SendCode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "EShop.DAL.DTO.Request.ForgetPasswordRequest",
         "IsRequired": true
       }
     ],

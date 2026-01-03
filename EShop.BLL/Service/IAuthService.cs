@@ -15,6 +15,9 @@ namespace EShop.BLL.Service
 
         Task<bool> confairmEmailAsync(string token, string userId);
 
+        Task<ForgetPasswordResponse> ResetPasswordRequest(ForgetPasswordRequest request);
+        Task<ResetPasswordResponse> ResetPassword(ResetPasswordRequest request);
+
     }
 
 }
