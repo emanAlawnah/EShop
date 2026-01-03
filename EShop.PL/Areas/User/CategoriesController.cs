@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
+using System.Security.Claims;
 
 namespace EShop.PL.Areas.User
 {
@@ -25,13 +26,14 @@ namespace EShop.PL.Areas.User
 
         [HttpGet("")]
         public IActionResult Index() {
-
+            
+           
             var response = _CategorySerivce.GetAllCategories();
             return Ok(new {massage= _Localizer["Success"].Value, response });
         
         }
 
-       
+
 
     }
 }

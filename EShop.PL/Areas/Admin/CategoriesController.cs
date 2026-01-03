@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
+using System.Security.Claims;
 
 namespace EShop.PL.Areas.Admin
 {
@@ -25,7 +26,7 @@ namespace EShop.PL.Areas.Admin
         [HttpPost("")]
         public IActionResult Create(CategoryRequest request)
         {
-
+            
             var response = _CategorySerivce.CreateCategory(request);
             return Ok(new { massage = _Localizer["Success"].Value });
 
