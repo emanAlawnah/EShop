@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace EShop.DAL.DTO.Response
 {
-    public class LoginResponse : BaseResponse
+    public class ForgetPasswordResponse : BaseResponse
     {
-       
-        public string? AccessToken { get; set; }
+        
+
     }
 }

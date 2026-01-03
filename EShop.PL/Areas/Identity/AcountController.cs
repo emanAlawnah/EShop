@@ -28,7 +28,7 @@ namespace EShop.PL.Areas.Identity
             return Ok(result);
 
         }
-        [HttpPost("Regiser")]
+        [HttpPost("Register")]
         public async Task<IActionResult> Register(RegisterRequest Request)
         {
             var result = await _AuthenticationService.RegisterAsync(Request);
@@ -44,6 +44,28 @@ namespace EShop.PL.Areas.Identity
         {
             var result = await _AuthenticationService.confairmEmailAsync(token, userId);
        
+            return Ok(result);
+        }
+
+        [HttpPost("SendCode")]
+        public async Task<IActionResult> RequestPasswordReset(ForgetPasswordRequest request) {
+            var result = await _AuthenticationService.ResetPasswordRequest(request);
+            if (!result.Success) { 
+            return BadRequest(result);
+            }
+            return Ok(result);
+        }
+
+
+
+        [HttpPatch("resetPassword")]
+        public async Task<IActionResult> ResetPassword(ResetPasswordRequest request)
+        {
+            var result = await _AuthenticationService.ResetPassword(request);
+            if (!result.Success)
+            {
+                return BadRequest(result);
+            }
             return Ok(result);
         }
     }
