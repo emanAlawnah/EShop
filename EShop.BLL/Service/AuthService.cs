@@ -166,6 +166,7 @@ namespace EShop.BLL.Service
         public async Task<string> GenerateAcsessToken(AplecationUser user) {
             var userClaims = new List<Claim>()
         {
+            new Claim(ClaimTypes.NameIdentifier, user.Id),
             new Claim ("id",user.Id),
             new Claim("username",user.UserName),
             new Claim ("email",user.Email)
