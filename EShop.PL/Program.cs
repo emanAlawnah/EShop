@@ -73,11 +73,8 @@ namespace EShop.PL
           
             }).AddEntityFrameworkStores<AplicationDbContext>().AddDefaultTokenProviders();
             builder.Services.AddSwaggerGen();
-            builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
-            builder.Services.AddScoped<ICategorySerivce, CategoryService>();
-            builder.Services.AddScoped<IAuthService, AuthService>();
-            builder.Services.AddScoped<ISeedData, RoleSeedData>();
-            builder.Services.AddScoped<ISeedData, UserSeadData>();
+            AppConfigaration.Config(builder.Services);
+
 
             builder.Services.AddAuthentication(opt => {
                 opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -97,7 +94,6 @@ namespace EShop.PL
         };
     });
 
-            builder.Services.AddTransient<IEmailSender, EmailSender>();
 
             var app = builder.Build();
             app.UseRequestLocalization(app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
