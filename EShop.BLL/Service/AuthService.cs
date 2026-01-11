@@ -164,13 +164,16 @@ namespace EShop.BLL.Service
             return true;
         }
         public async Task<string> GenerateAcsessToken(AplecationUser user) {
+            var roles = await _UserManager.GetRolesAsync(user);
             var userClaims = new List<Claim>()
+
         {
             new Claim(ClaimTypes.NameIdentifier, user.Id),
-            new Claim ("id",user.Id),
-            new Claim("username",user.UserName),
-            new Claim ("email",user.Email)
+            new Claim(ClaimTypes.Name,user.UserName),
+            new Claim (ClaimTypes.Email,user.Email),
+            new Claim (ClaimTypes.Role,string.Join(',',roles))
         };
+          
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_Configuration["Jwt:SecurityKey"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 

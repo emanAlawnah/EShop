@@ -11,7 +11,7 @@ namespace EShop.PL.Areas.Admin
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    [Authorize (Roles ="Admin")]
     public class CategoriesController : ControllerBase
     {
         private readonly ICategorySerivce _CategorySerivce;
