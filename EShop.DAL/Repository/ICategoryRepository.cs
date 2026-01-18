@@ -9,8 +9,11 @@ namespace EShop.DAL.Repository
 {
     public interface ICategoryRepository
     {
-       List<Category> GetAll();
-        Category Create(Category category);
+        Task<List<Category>> GetAllAsync();
+        Task<Category> CreateAsync(Category Request);
+        Task<Category?> FindByIdAsync(int id);
+        Task DeleteAsync(Category category);
+        Task<Category?> UpdateAsync(Category category);
 
     }
 }
