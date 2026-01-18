@@ -1,5 +1,6 @@
 
 
+using EShop.BLL.MapsterConfigarations;
 using EShop.BLL.Service;
 using EShop.DAL.Data;
 using EShop.DAL.Models;
@@ -74,6 +75,7 @@ namespace EShop.PL
             }).AddEntityFrameworkStores<AplicationDbContext>().AddDefaultTokenProviders();
             builder.Services.AddSwaggerGen();
             AppConfigaration.Config(builder.Services);
+            MapsterConfig.MapsterCoinfRegister();
 
 
             builder.Services.AddAuthentication(opt => {

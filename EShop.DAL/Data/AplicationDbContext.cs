@@ -18,6 +18,9 @@ namespace EShop.DAL.Data
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<CategoryTranslation> CategoryTranslations { get; set; }
+
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductTranslation> ProductTranslations { get; set; }
         public AplicationDbContext(DbContextOptions<AplicationDbContext> options,
             IHttpContextAccessor httpContextAccessor
             )
@@ -36,10 +39,40 @@ namespace EShop.DAL.Data
             builder.Entity<IdentityUserLogin<string>>().ToTable("UserLogins");
             builder.Entity<IdentityUserToken<string>>().ToTable("UserTokens");
 
+            builder.Entity<Category>()
+                .HasOne(c => c.User)
+                .WithMany()
+                .HasForeignKey(c => c.CreatedBy)
+                .OnDelete(DeleteBehavior.NoAction);
+
 
 
         }
 
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        {
+            var entries = ChangeTracker.Entries<BaseModel>();
+            var currentId = _HttpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            foreach (var entry in entries)
+            {
+
+                if (entry.State == EntityState.Added)
+                {
+                    entry.Property(x => x.CreatedBy).CurrentValue = currentId;
+                    entry.Property(x => x.CreateAt).CurrentValue = DateTime.UtcNow;
+                }
+                else if (entry.State == EntityState.Modified)
+                {
+
+                    entry.Property(x => x.UpdatedBy).CurrentValue = currentId;
+                    entry.Property(x => x.UpdatedAt).CurrentValue = DateTime.UtcNow;
+                }
+            }
+            return base.SaveChangesAsync(cancellationToken);
+
+
+        }
         public override int SaveChanges()
         {
             var entries = ChangeTracker.Entries<BaseModel>();

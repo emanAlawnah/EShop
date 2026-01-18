@@ -11,7 +11,11 @@ namespace EShop.BLL.Service
 {
     public interface ICategorySerivce
     {
-        List<CategoryResponse> GetAllCategories();
-        CategoryResponse CreateCategory(CategoryRequest category);
+        Task<BaseResponse> ToggleStatus(int id);
+        Task<BaseResponse> DeleteCategoryAsync(int id);
+        Task<List<CategoryResponse>> GetAllCategoriesForAdmin();
+        Task<List<CategoryUserResponse>> GetAllCategoriesForUser(string lang = "en");
+        Task<CategoryResponse> CreateCategory(CategoryRequest request);
+        Task<BaseResponse> UpdateCategoryAsync(int id, CategoryRequest request);
     }
 }

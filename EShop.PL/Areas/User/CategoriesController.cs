@@ -7,12 +7,13 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace EShop.PL.Areas.User
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    
     public class CategoriesController : ControllerBase
     {
         private readonly ICategorySerivce _CategorySerivce;
@@ -25,10 +26,10 @@ namespace EShop.PL.Areas.User
         }
 
         [HttpGet("")]
-        public IActionResult Index() {
+        public async Task<IActionResult> Index([FromQuery] string lang = "en") {
             
            
-            var response = _CategorySerivce.GetAllCategories();
+            var response = await _CategorySerivce.GetAllCategoriesForUser(lang);
             return Ok(new {massage= _Localizer["Success"].Value, response });
         
         }
