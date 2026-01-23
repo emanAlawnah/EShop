@@ -68,5 +68,16 @@ namespace EShop.PL.Areas.Identity
             }
             return Ok(result);
         }
+
+        [HttpPatch("RefreshToken")]
+        public async Task<IActionResult> RefreshToken(TokenApiModel request)
+        {
+         var result = await _AuthenticationService.RefreshTokenAsync(request);
+            if (!result.Success) 
+            {
+                return BadRequest(result);
+            } else
+                return Ok(result);
+        }
     }
 }

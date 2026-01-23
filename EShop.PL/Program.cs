@@ -1,5 +1,3 @@
-
-
 using EShop.BLL.MapsterConfigarations;
 using EShop.BLL.Service;
 using EShop.DAL.Data;
@@ -52,8 +50,8 @@ namespace EShop.PL
             });
 
 
-            builder.Services.AddDbContext<AplicationDbContext>(options =>
-            options.UseSqlServer(builder.Configuration.GetSection("ConnectionStrings")["DefultConection"]));
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetSection("ConnectionStrings")["DefaultConnection"]));
 
             builder.Services.AddIdentity<AplecationUser, IdentityRole>(Options =>
             {
@@ -72,7 +70,7 @@ namespace EShop.PL
 
                 Options.SignIn.RequireConfirmedEmail = true;
           
-            }).AddEntityFrameworkStores<AplicationDbContext>().AddDefaultTokenProviders();
+            }).AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
             builder.Services.AddSwaggerGen();
             AppConfigaration.Config(builder.Services);
             MapsterConfig.MapsterCoinfRegister();
@@ -90,6 +88,7 @@ namespace EShop.PL
             ValidateAudience = true,
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
+            ClockSkew = TimeSpan.Zero,
             ValidIssuer = builder.Configuration["Jwt:Issuer"],
             ValidAudience = builder.Configuration["Jwt:Audience"],
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SecurityKey"]))
@@ -108,6 +107,7 @@ namespace EShop.PL
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+            app.UseStaticFiles();
 
             app.UseHttpsRedirection();
             app.UseAuthentication();

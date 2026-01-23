@@ -22,6 +22,9 @@ namespace EShop.BLL.MapsterConfigarations
 
             TypeAdapterConfig<Category, CategoryUserResponse>.NewConfig()
               .Map(dest => dest.Name, source => source.Translations.Where(t => t.Language == MapContext.Current.Parameters["lang"].ToString()).Select(t => t.Name).FirstOrDefault());
+
+            TypeAdapterConfig<Product,ProductResponse>.NewConfig()
+                .Map(dest=>dest.MainImage, source => $"https://localhost:7170/Images/{source.MainImage}"); 
         }
 
        

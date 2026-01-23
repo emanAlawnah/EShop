@@ -11,9 +11,9 @@ namespace EShop.DAL.Repository
 {
     public class CategoryRepository : ICategoryRepository
     {
-        private readonly AplicationDbContext _Context;
+        private readonly ApplicationDbContext _Context;
 
-        public CategoryRepository(AplicationDbContext context)
+        public CategoryRepository(ApplicationDbContext context)
         {
             _Context = context;
         }

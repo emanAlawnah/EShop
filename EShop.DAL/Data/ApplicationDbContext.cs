@@ -12,16 +12,17 @@ using System.Threading.Tasks;
 
 namespace EShop.DAL.Data
 {
-    public class AplicationDbContext :IdentityDbContext<AplecationUser>
+    public class ApplicationDbContext :IdentityDbContext<AplecationUser>
     {
         private readonly IHttpContextAccessor _HttpContextAccessor;
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<CategoryTranslation> CategoryTranslations { get; set; }
-
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductTranslation> ProductTranslations { get; set; }
-        public AplicationDbContext(DbContextOptions<AplicationDbContext> options,
+        public DbSet<ProductImage> ProductImages { get; set; }
+
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options,
             IHttpContextAccessor httpContextAccessor
             )
         : base(options)
@@ -52,9 +53,10 @@ namespace EShop.DAL.Data
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
             var entries = ChangeTracker.Entries<BaseModel>();
-            var currentId = _HttpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if(_HttpContextAccessor.HttpContext != null) {
+             var currentId = _HttpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            foreach (var entry in entries)
+                foreach (var entry in entries)
             {
 
                 if (entry.State == EntityState.Added)
@@ -68,6 +70,7 @@ namespace EShop.DAL.Data
                     entry.Property(x => x.UpdatedBy).CurrentValue = currentId;
                     entry.Property(x => x.UpdatedAt).CurrentValue = DateTime.UtcNow;
                 }
+            }
             }
             return base.SaveChangesAsync(cancellationToken);
 
