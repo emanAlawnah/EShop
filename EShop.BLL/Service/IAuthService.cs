@@ -12,7 +12,7 @@ namespace EShop.BLL.Service
     {
         Task<RegisterResponse> RegisterAsync(RegisterRequest registerRequest);
         Task<LoginResponse> LoginAsync(LoginRequest loginRequest);
-
+        Task<LoginResponse> RefreshTokenAsync(TokenApiModel request);
         Task<bool> confairmEmailAsync(string token, string userId);
 
         Task<ForgetPasswordResponse> ResetPasswordRequest(ForgetPasswordRequest request);

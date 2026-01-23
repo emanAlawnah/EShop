@@ -16,6 +16,14 @@ namespace EShop.PL
             Services.AddScoped<ISeedData, RoleSeedData>();
             Services.AddScoped<ISeedData, UserSeadData>();
             Services.AddTransient<IEmailSender, EmailSender>();
+
+            Services.AddScoped<IFileService, FileService>();
+            Services.AddTransient<IProductService, ProductService>();
+            Services.AddTransient<IProductRepository, ProductRepository>();
+            Services.AddTransient<ITokenService, TokenService>();
+
+
+
         }
     }
 }

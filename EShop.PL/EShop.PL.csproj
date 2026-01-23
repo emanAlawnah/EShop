@@ -19,4 +19,13 @@
     <ProjectReference Include="..\EShop.BLL\EShop.BLL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Images\0c99b909-a54d-4ae4-affa-bd9bb6bd2bbb.PNG" />
+    <None Include="wwwroot\Images\94466ae0-9e36-4f04-800d-b6f1eda9536a.jpg" />
+  </ItemGroup>
+
 </Project>

@@ -79,6 +79,62 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "EShop.PL.Areas.Admin.ProductsController",
+    "Method": "Index",
+    "RelativePath": "api/admin/Products",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EShop.PL.Areas.Admin.ProductsController",
+    "Method": "create",
+    "RelativePath": "api/admin/Products",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Translations",
+        "Type": "System.Collections.Generic.List\u00601[[EShop.DAL.DTO.Request.ProductTransilationRequest, EShop.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Price",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "Discount",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "Quantity",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SubImages",
+        "Type": "System.Collections.Generic.List\u00601[[Microsoft.AspNetCore.Http.IFormFile, Microsoft.AspNetCore.Http.Features, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "MainImage",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "CategoryId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EShop.PL.Areas.Identity.AcountController",
     "Method": "ConfairmEmail",
     "RelativePath": "api/Auth/Acount/confairmemail",
@@ -110,6 +166,22 @@
       {
         "Name": "Request",
         "Type": "EShop.DAL.DTO.Request.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EShop.PL.Areas.Identity.AcountController",
+    "Method": "RefreshToken",
+    "RelativePath": "api/Auth/Acount/RefreshToken",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "EShop.DAL.DTO.Request.TokenApiModel",
         "IsRequired": true
       }
     ],

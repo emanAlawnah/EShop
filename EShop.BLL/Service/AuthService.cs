@@ -4,6 +4,7 @@ using EShop.DAL.Models;
 using Mapster;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -23,13 +24,19 @@ namespace EShop.BLL.Service
         private readonly IConfiguration _Configuration;
         private readonly IEmailSender _EmailSender;
         private readonly SignInManager<AplecationUser> _Signinmaneger;
+        private readonly ITokenService _TokenService;
 
-        public AuthService(UserManager<AplecationUser> userManager,IConfiguration configuration,IEmailSender emailSender, SignInManager<AplecationUser> signinmaneger)
+        public AuthService(UserManager<AplecationUser> userManager,IConfiguration configuration,IEmailSender emailSender, SignInManager<AplecationUser> signinmaneger,
+            ITokenService tokenService
+
+  
+            )
         {
             _UserManager = userManager;
             _Configuration = configuration;
             _EmailSender = emailSender;
             _Signinmaneger = signinmaneger;
+            _TokenService = tokenService;
         }
         public async Task<LoginResponse> LoginAsync(LoginRequest loginRequest)
         {
@@ -80,15 +87,19 @@ namespace EShop.BLL.Service
                     };
 
                 }
-             
 
-
+                var accessToken = await _TokenService.GenerateAccessToken(user);
+                var refreshToken =  _TokenService.GenerateRefreshToken();
+                user.RefreshToken = refreshToken;
+                user.RefreshTokenExpiryTime = DateTime.UtcNow.AddMonths(3);
+                await _UserManager.UpdateAsync(user);
 
                 return new LoginResponse()
                 {
                     Success = true,
                     Message = "loged in succesfully",
-                    AccessToken = await GenerateAcsessToken(user)
+                    AccessToken = accessToken,
+                    RefreshToken=refreshToken
                 };
             }
 
@@ -163,29 +174,7 @@ namespace EShop.BLL.Service
             if(!result.Succeeded) { return false; }
             return true;
         }
-        public async Task<string> GenerateAcsessToken(AplecationUser user) {
-            var roles = await _UserManager.GetRolesAsync(user);
-            var userClaims = new List<Claim>()
-
-        {
-            new Claim(ClaimTypes.NameIdentifier, user.Id),
-            new Claim(ClaimTypes.Name,user.UserName),
-            new Claim (ClaimTypes.Email,user.Email),
-            new Claim (ClaimTypes.Role,string.Join(',',roles))
-        };
-          
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_Configuration["Jwt:SecurityKey"]));
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
-            var token = new JwtSecurityToken(
-                issuer: _Configuration["Jwt:Issuer"],
-                audience: _Configuration["Jwt:Audience"],
-                claims: userClaims,
-                expires: DateTime.UtcNow.AddMinutes(30),
-                signingCredentials: creds);
-
-            return new JwtSecurityTokenHandler().WriteToken(token);
-        }
+      
 
         public async Task<ForgetPasswordResponse> ResetPasswordRequest(ForgetPasswordRequest request)
         {
@@ -267,6 +256,35 @@ namespace EShop.BLL.Service
                 Message = "password reset succesfully"
             };
 
+        }
+
+        public async Task<LoginResponse> RefreshTokenAsync(TokenApiModel request)
+        {
+            string accessToken = request.AccessToken;
+            string refreshToken = request.RefreshToken;
+            var principal = _TokenService.GetPrincipalFromExpiredToken(accessToken);
+            var userName = principal.Identity.Name;
+
+            var user= await _UserManager.Users.FirstOrDefaultAsync(u=>u.UserName == userName);
+            if (user == null || user.RefreshToken !=refreshToken || user.RefreshTokenExpiryTime<= DateTime.UtcNow) 
+            {
+                return new LoginResponse() { Success = false, Message = "invalied client request" };
+            }
+
+            var newAcessToken = await _TokenService.GenerateAccessToken(user);
+            var newRefreschToken =  _TokenService.GenerateRefreshToken();
+
+            user.RefreshToken = newRefreschToken;
+            user.RefreshTokenExpiryTime = DateTime.UtcNow.AddMonths(3);
+
+            await _UserManager.UpdateAsync(user);
+            return new LoginResponse
+            {
+                Success = true,
+                Message="Token Refreshed",
+                AccessToken= newAcessToken,
+                RefreshToken= newRefreschToken
+            };
         }
 
     }
